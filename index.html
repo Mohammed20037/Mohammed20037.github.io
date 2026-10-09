@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mohammed Haitham El Zamzamy — AI Engineer</title>
+<meta name="description" content="AI Engineer specializing in LLMs & RAG, Computer Vision, and production Full-Stack. Two IEEE papers, national AI Olympiad medalist, builder of ~15 production systems." />
+<meta name="author" content="Mohammed Haitham El Zamzamy" />
+<!-- Open Graph -->
+<meta property="og:title" content="Mohammed Haitham El Zamzamy — AI Engineer" />
+<meta property="og:description" content="LLMs & RAG · Computer Vision · Full-Stack · MLOps. Two IEEE papers, AI Olympiad medalist, ~15 production systems shipped." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+<style>
+:root{
+  --bg:#0a0a0f; --bg-soft:#12121a; --card:#16161f; --card-hover:#1c1c28;
+  --border:#26263300; --border-v:#2a2a38;
+  --text:#ececf5; --muted:#9a9ab0; --faint:#6b6b80;
+  --accent:#7c5cff; --accent2:#22d3ee; --accent3:#f472b6;
+  --grad:linear-gradient(120deg,#7c5cff 0%,#22d3ee 100%);
+  --grad-text:linear-gradient(120deg,#a78bfa 0%,#22d3ee 60%,#f472b6 100%);
+  --maxw:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(60vw 60vw at 80% -10%,rgba(124,92,255,.18),transparent 60%),
+    radial-gradient(50vw 50vw at 0% 20%,rgba(34,211,238,.12),transparent 55%),
+    radial-gradient(40vw 40vw at 60% 110%,rgba(244,114,182,.10),transparent 55%);
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(14px);
+  background:rgba(10,10,15,.65);border-bottom:1px solid var(--border-v)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:17px;letter-spacing:-.02em}
+.brand span{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{display:flex;gap:28px;font-size:14.5px;font-weight:500}
+.nav-links a{color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--grad);color:#fff;padding:8px 16px;border-radius:9px;font-weight:600;font-size:14px}
+.burger{display:none;background:none;border:0;color:var(--text);font-size:24px;cursor:pointer}
+@media(max-width:780px){.nav-links{display:none}.burger{display:block}}
+
+/* HERO */
+header{padding:90px 0 70px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;
+  color:var(--accent2);border:1px solid var(--border-v);background:var(--card);
+  padding:6px 14px;border-radius:999px;margin-bottom:24px}
+.dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 12px #34d399}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.04;font-weight:900;letter-spacing:-.03em;margin-bottom:20px}
+h1 .g{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:720px;margin-bottom:14px;font-weight:500}
+.sub b{color:var(--text);font-weight:600}
+.loc{color:var(--faint);font-size:15px;margin-bottom:30px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:11px;
+  font-weight:600;font-size:15px;transition:transform .15s,box-shadow .2s,background .2s;border:1px solid transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 8px 28px rgba(124,92,255,.35)}
+.btn-ghost{background:var(--card);border-color:var(--border-v);color:var(--text)}
+.btn-ghost:hover{background:var(--card-hover)}
+.socials{display:flex;gap:16px;flex-wrap:wrap}
+.socials a{color:var(--muted);font-size:14.5px;font-weight:500;display:inline-flex;gap:7px;align-items:center;transition:color .2s}
+.socials a:hover{color:var(--accent2)}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.stat{background:var(--card);border:1px solid var(--border-v);border-radius:16px;padding:22px 20px;transition:.2s}
+.stat:hover{background:var(--card-hover);transform:translateY(-3px)}
+.stat .n{font-size:30px;font-weight:900;letter-spacing:-.02em;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat .l{font-size:13px;color:var(--muted);margin-top:6px;font-weight:500}
+@media(max-width:780px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* SECTIONS */
+section{padding:72px 0;position:relative}
+.sec-head{margin-bottom:44px}
+.sec-tag{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);font-weight:500;letter-spacing:.05em}
+.sec-title{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;margin-top:8px}
+.sec-sub{color:var(--muted);margin-top:10px;max-width:640px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+.about p{color:var(--muted);font-size:16.5px;margin-bottom:16px}
+.about p b{color:var(--text)}
+.quickfacts{background:var(--card);border:1px solid var(--border-v);border-radius:18px;padding:26px}
+.quickfacts h4{font-size:14px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;font-weight:600}
+.qf-row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--border-v);font-size:14.5px}
+.qf-row:last-child{border:0}
+.qf-row span:first-child{color:var(--muted)}
+.qf-row span:last-child{font-weight:600;text-align:right}
+@media(max-width:780px){.about-grid{grid-template-columns:1fr}}
+
+/* SKILLS */
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.skill-card{background:var(--card);border:1px solid var(--border-v);border-radius:16px;padding:24px;transition:.2s}
+.skill-card:hover{background:var(--card-hover);border-color:#3a3a50}
+.skill-card h4{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:700;margin-bottom:16px}
+.skill-card h4 .ic{font-size:20px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;background:#1e1e2b;border:1px solid var(--border-v);color:var(--muted);
+  padding:5px 11px;border-radius:8px;font-weight:500;transition:.15s}
+.chip:hover{color:var(--text);border-color:var(--accent);background:#23233a}
+@media(max-width:780px){.skill-grid{grid-template-columns:1fr}}
+
+/* EXPERIENCE */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(var(--accent),var(--accent2),transparent)}
+.exp{position:relative;margin-bottom:34px}
+.exp::before{content:"";position:absolute;left:-28px;top:6px;width:16px;height:16px;border-radius:50%;
+  background:var(--bg);border:3px solid var(--accent);box-shadow:0 0 0 4px rgba(124,92,255,.15)}
+.exp .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:6px}
+.exp h4{font-size:18px;font-weight:700}
+.exp .co{color:var(--accent2);font-weight:600}
+.exp .when{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--faint);white-space:nowrap}
+.exp .role-sub{color:var(--faint);font-size:14px;margin-bottom:12px;font-style:italic}
+.exp ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.exp li{color:var(--muted);font-size:15px;padding-left:22px;position:relative}
+.exp li::before{content:"▹";position:absolute;left:0;color:var(--accent)}
+.exp li b{color:var(--text);font-weight:600}
+
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.proj{background:var(--card);border:1px solid var(--border-v);border-radius:16px;padding:24px;
+  display:flex;flex-direction:column;transition:.2s;position:relative;overflow:hidden}
+.proj::after{content:"";position:absolute;inset:0;border-radius:16px;padding:1px;
+  background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:.25s;pointer-events:none}
+.proj:hover{transform:translateY(-4px);background:var(--card-hover)}
+.proj:hover::after{opacity:1}
+.proj .tag{font-size:12px;font-family:'JetBrains Mono',monospace;color:var(--accent2);margin-bottom:12px;font-weight:500}
+.proj h4{font-size:17px;font-weight:700;margin-bottom:9px;line-height:1.3}
+.proj p{color:var(--muted);font-size:14px;flex-grow:1;margin-bottom:16px}
+.proj .stack{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.proj .stack span{font-size:11.5px;background:#1e1e2b;border:1px solid var(--border-v);padding:3px 8px;border-radius:6px;color:var(--faint)}
+.proj .links{display:flex;gap:14px;font-size:13.5px;font-weight:600}
+.proj .links a{color:var(--accent);display:inline-flex;gap:5px;align-items:center}
+.proj .links a:hover{color:var(--accent2)}
+@media(max-width:900px){.proj-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.proj-grid{grid-template-columns:1fr}}
+
+/* HIGHLIGHT BANNER (live demo + automation) */
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.feature{background:linear-gradient(145deg,rgba(124,92,255,.12),rgba(34,211,238,.06));
+  border:1px solid var(--border-v);border-radius:18px;padding:30px;position:relative;overflow:hidden}
+.feature .ic{font-size:30px;margin-bottom:14px}
+.feature h4{font-size:20px;font-weight:800;margin-bottom:10px}
+.feature p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.feature .btn{font-size:14px;padding:10px 18px}
+@media(max-width:780px){.feature-grid{grid-template-columns:1fr}}
+
+/* PUBLICATIONS / AWARDS */
+.pub-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pub{background:var(--card);border:1px solid var(--border-v);border-radius:14px;padding:22px;transition:.2s}
+.pub:hover{background:var(--card-hover)}
+.pub .badge{font-size:12px;font-weight:700;color:var(--accent3);font-family:'JetBrains Mono',monospace;margin-bottom:8px}
+.pub h4{font-size:15.5px;font-weight:700;line-height:1.4;margin-bottom:6px}
+.pub p{color:var(--muted);font-size:13.5px}
+@media(max-width:780px){.pub-grid{grid-template-columns:1fr}}
+
+/* CONTACT */
+.contact{text-align:center;background:var(--card);border:1px solid var(--border-v);border-radius:24px;padding:56px 32px;margin-bottom:40px}
+.contact h2{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
+.contact p{color:var(--muted);font-size:17px;margin-bottom:28px;max-width:500px;margin-inline:auto}
+footer{padding:30px 0 50px;text-align:center;color:var(--faint);font-size:14px;border-top:1px solid var(--border-v)}
+footer a{color:var(--muted)}footer a:hover{color:var(--text)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">M<span>HZ</span>.</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#live">Live&nbsp;AI</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+    <button class="burger" onclick="document.querySelector('.nav-links').style.display='flex'">☰</button>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Available immediately · Remote or on-site</div>
+    <h1>Mohammed Haitham<br><span class="g">El Zamzamy</span></h1>
+    <p class="sub"><b>AI Engineer</b> building production systems across <b>LLMs &amp; RAG</b>, <b>Computer Vision</b>, and <b>Full-Stack</b> — from prompt design through deployment and live incident response.</p>
+    <p class="loc">📍 Cairo, Egypt &nbsp;·&nbsp; 🎓 BSc Artificial Intelligence &nbsp;·&nbsp; 📄 2× IEEE-published &nbsp;·&nbsp; 🏅 National AI Olympiad — 2nd place</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#live">🚀 See live AI demo</a>
+      <a class="btn btn-ghost" href="#projects">View projects</a>
+      <a class="btn btn-ghost" href="Mohammed_ElZamzamy_CV.pdf" target="_blank">📄 Download CV</a>
+    </div>
+    <div class="socials">
+      <a href="mailto:mohammedhaitham17@outlook.com">✉️ mohammedhaitham17@outlook.com</a>
+      <a href="https://github.com/Mohammed20037" target="_blank">⌨️ GitHub</a>
+      <a href="https://linkedin.com/in/mohammed-zamzamy" target="_blank">💼 LinkedIn</a>
+      <a href="https://kaggle.com/mohammedzamzamy" target="_blank">📊 Kaggle</a>
+      <a href="https://huggingface.co/mo1235555" target="_blank">🤗 Hugging Face</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">~15</div><div class="l">Production systems shipped</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">IEEE-published papers</div></div>
+      <div class="stat"><div class="n">98.47%</div><div class="l">Best model accuracy (IEEE)</div></div>
+      <div class="stat"><div class="n">3,900+</div><div class="l">Automated tests authored</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">// 01 — about</div>
+      <h2 class="sec-title">AI engineer with a ship-to-production discipline</h2>
+    </div>
+    <div class="about-grid about reveal">
+      <div>
+        <p>I'm an AI Engineer and full-stack builder with <b>two IEEE-published deep-learning papers</b> and a <b>national AI Olympiad medal (2nd place)</b> across Computer Vision, Embedded Systems, and Cybersecurity.</p>
+        <p>As the <b>first and sole engineer</b> at a Saudi ride-hailing operator, I designed, built, and operate its entire internal software stack — roughly <b>15 production systems</b> spanning customer support, CRM, AI driver-screening, incentives, dispatch, and internal communications — while coordinating and mentoring a 3-person operations team.</p>
+        <p>I work deep across <b>LLMs &amp; RAG</b>, <b>computer vision</b>, and production <b>full-stack engineering</b> (TypeScript, Python, React, Next.js, PostgreSQL), with a test-heavy, ship-to-production mindset: migrations, deployments, API rotations, and live as-a-user verification before every release.</p>
+      </div>
+      <div class="quickfacts">
+        <h4>Quick facts</h4>
+        <div class="qf-row"><span>Role</span><span>AI / Full-Stack Engineer</span></div>
+        <div class="qf-row"><span>Based in</span><span>Cairo, Egypt</span></div>
+        <div class="qf-row"><span>Education</span><span>BSc Artificial Intelligence</span></div>
+        <div class="qf-row"><span>Focus</span><span>LLMs · CV · MLOps</span></div>
+        <div class="qf-row"><span>Languages</span><span>Arabic · English</span></div>
+        <div class="qf-row"><span>Availability</span><span>Immediate</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">// 02 — skills</div>
+      <h2 class="sec-title">Technical toolkit</h2>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-card reveal"><h4><span class="ic">🧠</span> AI &amp; Machine Learning</h4>
+        <div class="chips">
+          <span class="chip">LLMs (Gemini · GPT-4o · Claude)</span><span class="chip">RAG</span><span class="chip">Prompt Engineering</span>
+          <span class="chip">VLM &amp; OCR</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">scikit-learn</span>
+          <span class="chip">CNNs</span><span class="chip">U-Net / Attention U-Net</span><span class="chip">EfficientNet</span><span class="chip">LSTM</span>
+          <span class="chip">YOLOv8</span><span class="chip">OpenCV</span><span class="chip">Transfer Learning</span>
+        </div>
+      </div>
+      <div class="skill-card reveal"><h4><span class="ic">⚙️</span> Backend &amp; Languages</h4>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">JavaScript (Node.js)</span><span class="chip">SQL</span><span class="chip">C++</span>
+          <span class="chip">Express</span><span class="chip">Next.js</span><span class="chip">Drizzle ORM</span><span class="chip">Prisma</span><span class="chip">Zod</span>
+          <span class="chip">REST / OpenAPI</span><span class="chip">JWT / Session auth</span>
+        </div>
+      </div>
+      <div class="skill-card reveal"><h4><span class="ic">🎨</span> Frontend &amp; Data</h4>
+        <div class="chips">
+          <span class="chip">React</span><span class="chip">Vite</span><span class="chip">Tailwind CSS</span><span class="chip">shadcn/ui</span>
+          <span class="chip">TanStack Query</span><span class="chip">Streamlit</span>
+          <span class="chip">PostgreSQL (Neon)</span><span class="chip">SQLite</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Feature Engineering</span>
+        </div>
+      </div>
+      <div class="skill-card reveal"><h4><span class="ic">☁️</span> Cloud, DevOps &amp; Automation</h4>
+        <div class="chips">
+          <span class="chip">AWS (SageMaker · S3)</span><span class="chip">Vercel</span><span class="chip">DigitalOcean</span><span class="chip">Docker</span>
+          <span class="chip">GitHub CI/CD</span><span class="chip">Kafka</span><span class="chip">nginx · systemd · TLS</span>
+          <span class="chip">n8n</span><span class="chip">Meta WhatsApp API</span><span class="chip">LiveKit / WebRTC</span><span class="chip">Uber H3</span>
+          <span class="chip">Vitest · Playwright · pytest</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">// 03 — experience</div>
+      <h2 class="sec-title">Where I've shipped</h2>
+    </div>
+    <div class="timeline">
+      <div class="exp reveal">
+        <div class="top"><h4>AI &amp; Full-Stack Engineer · <span class="co">SHEGO</span></h4><span class="when">Jun 2026 — Present</span></div>
+        <div class="role-sub">Women-only ride-hailing operator (3 regional companies on ONDE). First &amp; sole engineer — own the entire internal stack.</div>
+        <ul>
+          <li>Designed, built &amp; operate <b>~15 Arabic-first production systems</b> — architecture, migrations, deployment &amp; live incident response — and mentor a 3-person ops &amp; content team.</li>
+          <li>Flagship <b>customer-support + CRM platform</b>: 195 PostgreSQL tables, 122 React pages, 91 API modules, ~7,500 live tickets, advisory-lock auto-assignment engine, SLA escalation, 84-toggle RBAC, 27-section QA — gated by <b>2,300+ automated tests</b> on every deploy.</li>
+          <li>Built an <b>AI driver-onboarding &amp; compliance system</b>: VLM document extraction (Gemini + GPT-4o) from Saudi licenses/IDs/iqamas, Arabic-name gender fusion, WASL/TGA decision engine — <b>1,664 tests</b>, remediated ~5,000 drivers, caught real identity fraud.</li>
+          <li>Shipped an <b>AI/OCR financial-verification pipeline</b> (GPT-4o vision reads IBAN/amount/beneficiary) and a confidence-gated <b>AI auto-reply</b> system with customer memory &amp; a usage-cost ledger.</li>
+          <li>Built driver <b>incentive &amp; retention</b> (append-only money ledger, serializable txns, Gemini smart-surge), <b>demand forecasting &amp; dispatch</b> (Poisson + Uber H3), and an automated <b>leads pipeline</b> (Meta/TikTok/Snapchat lead ads → WhatsApp).</li>
+        </ul>
+      </div>
+      <div class="exp reveal">
+        <div class="top"><h4>AI Engineer (Healthcare) · <span class="co">GraviLog</span></h4><span class="when">Oct 2025 — Present</span></div>
+        <div class="role-sub">Contract</div>
+        <ul>
+          <li>Built a <b>fetal-ultrasound segmentation model</b> (Attention U-Net + EfficientNet-B3) reaching <b>0.75 mean Dice</b> across 1,588 images / 169 patients, with patient-level splits &amp; mixed-precision training.</li>
+          <li>Delivered an end-to-end clinical inference pipeline with <b>Grad-CAM explainability</b> and structured measurement extraction, focused on reproducibility.</li>
+        </ul>
+      </div>
+      <div class="exp reveal">
+        <div class="top"><h4>AI Engineer · <span class="co">EVUNITY</span></h4><span class="when">Nov 2025 — Sep 2026</span></div>
+        <div class="role-sub">On-site, Cairo</div>
+        <ul>
+          <li>Build AI-driven <b>automation workflows</b> and web-based AI tools — LLM components, OAuth API connections &amp; intelligent backends — from prompt design through deployment.</li>
+          <li>Stood up <b>AABAR Mentor</b> (mentor.aabar.io) as a separate Go + React deployment on DigitalOcean with its own DB, SSO &amp; GPT-4 flow, live over HTTPS.</li>
+        </ul>
+      </div>
+      <div class="exp reveal">
+        <div class="top"><h4>AI Engineer (Automation) · <span class="co">Exavo.ai</span></h4><span class="when">Sep 2025 — Jun 2026</span></div>
+        <div class="role-sub">Remote, Contract</div>
+        <ul>
+          <li>Contributed to <b>7 production AI services</b> — audio transcription, email auto-reply drafting, social-media automation, custom AI agents, AI website builders, Shopify automation — using <b>n8n</b>, Replit &amp; Lovable.</li>
+          <li>Built &amp; deployed <b>n8n workflows</b> for daily content publishing (Google, LinkedIn, OpenAI APIs end-to-end) and reusable agents in Microsoft Copilot Studio.</li>
+        </ul>
+      </div>
+      <div class="exp reveal">
+        <div class="top"><h4>AI Engineering Intern · <span class="co">Algoriza / DMC-CURVE / Slash Hub</span></h4><span class="when">2024 — 2025</span></div>
+        <div class="role-sub">Remote &amp; Hybrid</div>
+        <ul>
+          <li>ML/LLM prototypes &amp; model evaluation (PyTorch, scikit-learn), <b>RAG proofs-of-concept</b> with vector stores &amp; conversational agents, and CNN models for product-image recognition &amp; visual-similarity recommendation.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">// 04 — projects</div>
+      <h2 class="sec-title">Selected open-source projects</h2>
+      <p class="sec-sub">A sample of real, public projects — computer vision, RAG agents, and ML. Full source on GitHub.</p>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj reveal">
+        <div class="tag">Computer Vision · LLM</div>
+        <h4>Jet-Bridge &amp; Boarding-Stairs Detection</h4>
+        <p>Detects aircraft body type, jet-bridge and boarding-stairs connections from airport gate video. YOLOv8 segmentation + Groq LLaMA-4 Scout zero-shot vision + Streamlit UI.</p>
+        <div class="stack"><span>YOLOv8</span><span>Groq</span><span>Streamlit</span><span>Docker</span></div>
+        <div class="links"><a href="https://github.com/Mohammed20037/jet-bridge-stairs-detection-cv" target="_blank">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">RAG · LLM · Live App</div>
+        <h4>GCC Market-Entry Certification Assistant</h4>
+        <p>Chat-first GCC product-compliance assistant: deterministic 3-stage decision engine, bilingual EN/AR chat, OCR pipeline — $0 per query. FastAPI + vanilla JS.</p>
+        <div class="stack"><span>FastAPI</span><span>RAG</span><span>OCR</span><span>Bilingual</span></div>
+        <div class="links"><a href="https://github.com/Mohammed20037/gcc-market-entry-certification-assistant" target="_blank">↗ GitHub</a><a href="#live">▶ Live demo</a></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">Multi-Agent · RAG</div>
+        <h4>NovaBite Multi-Agent RAG</h4>
+        <p>LangChain orchestrator with intent classification, a RAG sub-agent (FAISS + text-embedding-3-small) for menu/policy queries, and an operations sub-agent with MCP-style tool calling for bookings &amp; specials.</p>
+        <div class="stack"><span>LangChain</span><span>FAISS</span><span>MCP tools</span></div>
+        <div class="links"><a href="https://github.com/Mohammed20037/ai-junior-test" target="_blank">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">Data Pipeline · Speech · 🤗</div>
+        <h4>Synthetic Egyptian-Arabic Speech Dataset</h4>
+        <p>Pipeline producing training-ready synthetic Egyptian-Arabic speech: LLM prompts → multi-voice TTS → automated Whisper QA → human review → HuggingFace export.</p>
+        <div class="stack"><span>TTS</span><span>Whisper</span><span>HuggingFace</span></div>
+        <div class="links"><a href="https://github.com/Mohammed20037/ssdp-egyptian-arabic" target="_blank">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">Computer Vision</div>
+        <h4>Equipment Utilization &amp; Activity Classification</h4>
+        <p>Real-time heavy-equipment activity tracking prototype — YOLOv8 detection, custom hybrid tracker, masked optical flow, Kafka streaming, PostgreSQL &amp; a Streamlit dashboard.</p>
+        <div class="stack"><span>YOLOv8</span><span>Kafka</span><span>Optical Flow</span></div>
+        <div class="links"><a href="https://github.com/Mohammed20037/Equipment-Utilization-Activity-Classification-Prototype" target="_blank">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">Deep Learning · IEEE</div>
+        <h4>Plant Disease Classification</h4>
+        <p>Deep CNN models for plant-disease classification (the topic of my IEEE CSDGAIS 2024 paper on a novel CNN with L1 regularization). Includes an enhanced ensemble and a ResNet variant.</p>
+        <div class="stack"><span>PyTorch</span><span>CNN</span><span>ResNet</span><span>Grad-CAM</span></div>
+        <div class="links"><a href="https://github.com/Mohammed20037/Plant-Disease-Classification-Project-Enhanced" target="_blank">↗ Enhanced</a><a href="https://github.com/Mohammed20037/plant-disease-classification-resnet" target="_blank">↗ ResNet</a></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">NLP · Transformers</div>
+        <h4>BERT &amp; GPT Fine-Tuning</h4>
+        <p>Transformer fine-tuning for sentiment &amp; emotion detection using transfer learning and embedding extraction.</p>
+        <div class="stack"><span>BERT</span><span>GPT</span><span>Transformers</span></div>
+        <div class="links"><a href="https://github.com/Mohammed20037/Embeddings-and-Fine-Tuning-using-BERT-and-GPT" target="_blank">↗ GitHub</a><a href="https://github.com/Mohammed20037/Text-emotion-detection-using-NLP-techniques" target="_blank">↗ Emotion</a></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">Signal Processing</div>
+        <h4>Multi-Sensor Fusion — Vehicle Distance</h4>
+        <p>Kalman filtering and signal integration across multiple sensor inputs for robust vehicle-distance estimation.</p>
+        <div class="stack"><span>Kalman Filter</span><span>NumPy</span><span>Sensor Fusion</span></div>
+        <div class="links"><a href="https://github.com/Mohammed20037/Multi-Sensor-Fusion-for-Vehicle-Distance-Estimation" target="_blank">↗ GitHub</a></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">Recommender Systems</div>
+        <h4>Amazon Electronics Recommender</h4>
+        <p>Collaborative-filtering recommendation engine built on customer reviews and purchase behavior.</p>
+        <div class="stack"><span>Collaborative Filtering</span><span>Pandas</span></div>
+        <div class="links"><a href="https://github.com/Mohammed20037/Recommendation-Systems-for-Amazon-Electronic-Products" target="_blank">↗ GitHub</a></div>
+      </div>
+
+    </div>
+    <p style="text-align:center;margin-top:36px" class="reveal">
+      <a class="btn btn-ghost" href="https://github.com/Mohammed20037?tab=repositories" target="_blank">See all repositories on GitHub →</a>
+    </p>
+  </div>
+</section>
+
+<section id="live">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">// 05 — live &amp; automation</div>
+      <h2 class="sec-title">Live AI &amp; automation</h2>
+      <p class="sec-sub">Publicly accessible AI apps and automation workflows you can try right now.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature reveal">
+        <div class="ic">🤗</div>
+        <h4>Live AI app — on Hugging Face</h4>
+        <p>The GCC Market-Entry Certification Assistant, running live as a public Hugging Face Space: bilingual EN/AR compliance chat with a deterministic decision engine. Try it in your browser — no install.</p>
+        <a class="btn btn-primary" href="https://huggingface.co/mo1235555" target="_blank">Open live demo →</a>
+      </div>
+      <div class="feature reveal">
+        <div class="ic">🔗</div>
+        <h4>n8n automation workflows</h4>
+        <p>A published collection of production-style n8n automation workflows — AI content pipelines, lead-capture automations and LLM agents — with importable JSON, diagrams and docs.</p>
+        <a class="btn btn-primary" href="https://github.com/Mohammed20037/n8n-automation-workflows" target="_blank">Browse workflows →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications" style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">// 06 — publications &amp; awards</div>
+      <h2 class="sec-title">Research &amp; recognition</h2>
+    </div>
+    <div class="pub-grid">
+      <div class="pub reveal">
+        <div class="badge">IEEE IMCOM 2026</div>
+        <h4>Explainable Ensemble Deep Learning for Fruit Disease Detection</h4>
+        <p>Sustainable agriculture &amp; food-system resilience — <b>98.47% accuracy</b> with Grad-CAM explainability. Published on IEEE Xplore.</p>
+      </div>
+      <div class="pub reveal">
+        <div class="badge">IEEE CSDGAIS 2024</div>
+        <h4>A Novel Deep CNN Model with L1 Regularization for Plant Disease Classification</h4>
+        <p>Deep CNN architecture with L1 regularization for robust plant-disease classification.</p>
+      </div>
+      <div class="pub reveal">
+        <div class="badge">🏅 AWARD · EGYPT 2024</div>
+        <h4>AI Olympiad — 2nd Place Nationally</h4>
+        <p>Across Computer Vision, Embedded Systems, and Cybersecurity.</p>
+      </div>
+      <div class="pub reveal">
+        <div class="badge">🎓 CERTIFICATIONS</div>
+        <h4>NVIDIA · AWS · DeepLearning.AI · DataCamp · Meta</h4>
+        <p>Transformer-Based NLP (NVIDIA) · AWS ML &amp; Cloud Foundations · Advanced Learning Algorithms (DeepLearning.AI &amp; Stanford) · Data Scientist Pro &amp; Deep Learning with PyTorch (DataCamp) · Meta Front-End.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact reveal">
+      <h2>Let's build something.</h2>
+      <p>Open to AI Engineer / Full-Stack roles — remote or on-site. Available immediately.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-primary" href="mailto:mohammedhaitham17@outlook.com">✉️ Email me</a>
+        <a class="btn btn-ghost" href="https://linkedin.com/in/mohammed-zamzamy" target="_blank">💼 LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/Mohammed20037" target="_blank">⌨️ GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="yr"></span> Mohammed Haitham El Zamzamy · Built with plain HTML/CSS — hosted free on GitHub Pages.</p>
+    <p style="margin-top:8px">
+      <a href="mailto:mohammedhaitham17@outlook.com">Email</a> ·
+      <a href="https://github.com/Mohammed20037" target="_blank">GitHub</a> ·
+      <a href="https://linkedin.com/in/mohammed-zamzamy" target="_blank">LinkedIn</a> ·
+      <a href="https://kaggle.com/mohammedzamzamy" target="_blank">Kaggle</a> ·
+      <a href="https://huggingface.co/mo1235555" target="_blank">Hugging Face</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const io = new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay=(i%3*60)+'ms'; io.observe(el); });
+</script>
+</body>
+</html>
