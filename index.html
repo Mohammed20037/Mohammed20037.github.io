@@ -153,6 +153,20 @@ section{padding:72px 0;position:relative}
 @media(max-width:900px){.proj-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.proj-grid{grid-template-columns:1fr}}
 
+/* FLAGSHIP badges */
+.scope{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;font-family:'JetBrains Mono',monospace;
+  padding:3px 9px;border-radius:7px;letter-spacing:.02em}
+.scope.priv{color:#fbbf24;background:rgba(251,191,36,.10);border:1px solid rgba(251,191,36,.3)}
+.scope.live{color:#34d399;background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.3)}
+.scope.ent{color:var(--acc2);background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.25)}
+.proj .metrics{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 14px}
+.proj .metrics span{font-size:11.5px;background:#191926;border:1px solid var(--border-v);color:var(--muted);
+  padding:3px 9px;border-radius:7px;font-family:'JetBrains Mono',monospace}
+.proj .metrics b{color:var(--text);font-weight:700}
+.flag-intro{background:linear-gradient(145deg,rgba(124,92,255,.10),rgba(34,211,238,.05));
+  border:1px solid var(--border-v);border-radius:16px;padding:22px 24px;margin-bottom:26px}
+.flag-intro p{color:var(--muted);font-size:15.5px}
+.flag-intro b{color:var(--text)}
 /* HIGHLIGHT BANNER (live demo + automation) */
 .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .feature{background:linear-gradient(145deg,rgba(124,92,255,.12),rgba(34,211,238,.06));
@@ -192,7 +206,8 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
+      <a href="#work">Systems</a>
+      <a href="#projects">Open&nbsp;Source</a>
       <a href="#live">Live&nbsp;AI</a>
       <a href="#contact">Contact</a>
     </div>
@@ -348,12 +363,99 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
   </div>
 </section>
 
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">// 04 — flagship work</div>
+      <h2 class="sec-title">Production systems I designed, built &amp; operate</h2>
+      <p class="sec-sub">Real, high-scale systems running live in production. Enterprise &amp; internal platforms are proprietary — shown here with architecture and hard metrics rather than public links.</p>
+    </div>
+    <div class="flag-intro reveal">
+      <p>🚗 As the <b>first and sole engineer at SHEGO</b> (a Saudi women-only ride-hailing operator on the ONDE platform), I designed, built, and operate the <b>entire internal software stack — roughly 15 Arabic-first production systems</b> — owning architecture, 160+ database migrations, deployment, API-key rotation, and live incident response, while mentoring a 3-person ops &amp; content team. A selection below.</p>
+    </div>
+    <div class="proj-grid">
+
+      <div class="proj reveal">
+        <div class="tag">SHEGO · Flagship &nbsp;<span class="scope priv">🔒 PRIVATE</span></div>
+        <h4>Customer-Support Platform + CRM</h4>
+        <p>End-to-end help desk and CRM ingesting WhatsApp &amp; email into tickets, with an advisory-lock auto-assignment &amp; routing engine, SLA escalation, a 84-toggle role-based access model, and a 27-section quality-evaluation system.</p>
+        <div class="metrics"><span><b>195</b> PG tables</span><span><b>122</b> React pages</span><span><b>91</b> API modules</span><span><b>~7,500</b> live tickets</span><span><b>2,300+</b> tests</span></div>
+        <div class="stack"><span>React</span><span>Express</span><span>PostgreSQL/Neon</span><span>WhatsApp Cloud API</span></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">SHEGO · AI / Computer Vision &nbsp;<span class="scope priv">🔒 PRIVATE</span></div>
+        <h4>AI Driver Onboarding &amp; Compliance Screening</h4>
+        <p>Vision-language document extraction from Saudi licenses, national IDs &amp; iqamas (Gemini + GPT-4o), Arabic-name gender fusion, and a WASL/TGA compliance decision engine verified row-for-row against the official Saudi spec. Caught real identity fraud.</p>
+        <div class="metrics"><span><b>1,664</b> tests</span><span><b>~5,000</b> drivers remediated</span></div>
+        <div class="stack"><span>Gemini</span><span>GPT-4o VLM</span><span>OCR</span><span>Decision engine</span></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">SHEGO · AI / LLM &nbsp;<span class="scope priv">🔒 PRIVATE</span></div>
+        <h4>AI/OCR Financial Verification + Auto-Reply</h4>
+        <p>A GPT-4o vision pipeline that reads IBAN, amount &amp; beneficiary from documents and matches them deterministically, plus a confidence-gated AI auto-reply system with per-customer memory and a token usage-cost ledger.</p>
+        <div class="metrics"><span>GPT-4o vision</span><span>Deterministic match</span><span>Cost ledger</span></div>
+        <div class="stack"><span>GPT-4o</span><span>OCR</span><span>RAG memory</span></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">SHEGO · Fintech-grade &nbsp;<span class="scope priv">🔒 PRIVATE</span></div>
+        <h4>Driver Incentives &amp; Smart-Surge Engine</h4>
+        <p>A money-critical incentive &amp; retention system with an <b>append-only ledger</b> and <b>serializable transactions</b> enforcing trip caps under concurrency, plus a Gemini-driven smart-surge engine issuing real driver payouts.</p>
+        <div class="metrics"><span>Append-only ledger</span><span>Serializable txns</span><span>Real payouts</span></div>
+        <div class="stack"><span>Next.js</span><span>Prisma</span><span>Neon</span><span>Gemini</span></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">SHEGO · Data / ML &nbsp;<span class="scope priv">🔒 PRIVATE</span></div>
+        <h4>Demand Forecasting &amp; Dispatch</h4>
+        <p>Demand forecasting with Poisson modeling over <b>Uber H3</b> geospatial zones, a forecast-accuracy A/B ledger, and a Google Maps operations console — plus an automated leads pipeline ingesting Meta, TikTok &amp; Snapchat lead ads into WhatsApp recruitment templates.</p>
+        <div class="metrics"><span>Poisson model</span><span>Uber H3 zones</span><span>A/B ledger</span></div>
+        <div class="stack"><span>Python</span><span>Uber H3</span><span>Google Maps</span><span>Meta/TikTok APIs</span></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">SHEGO · Real-time &nbsp;<span class="scope priv">🔒 PRIVATE</span></div>
+        <h4>Internal Comms Platform + Ops Suite</h4>
+        <p>A custom Slack/Teams with real-time <b>LiveKit audio &amp; video for up to 100 participants</b>, plus a CRM replacing Zoho (27 features on n8n), a request-lifecycle tracker (Postgres triggers + Gemini subtask splitter), a tasks &amp; approval-chains system, a referral workspace, and a training-quiz platform.</p>
+        <div class="metrics"><span>LiveKit / WebRTC</span><span>100 participants</span><span>n8n CRM · 27 features</span></div>
+        <div class="stack"><span>LiveKit</span><span>WebSockets</span><span>n8n</span><span>Postgres triggers</span></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">EVUNITY · Product &nbsp;<span class="scope live">🟢 LIVE</span></div>
+        <h4>AABAR Mentor — AI Behavior Coach</h4>
+        <p>Stood up <b>AABAR Mentor</b> as a separate Go + React deployment on a DigitalOcean droplet with its own database, preserved SSO and a GPT-4 flow — live over HTTPS as a client-facing AI coaching product.</p>
+        <div class="metrics"><span>Go + React</span><span>SSO</span><span>GPT-4</span><span>DigitalOcean</span></div>
+        <div class="links"><a href="https://mentor.aabar.io" target="_blank">↗ mentor.aabar.io</a></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">Exavo.ai · AI Automation &nbsp;<span class="scope ent">7 SERVICES</span></div>
+        <h4>Production AI Services &amp; Automations</h4>
+        <p>Contributed to <b>7 production AI services</b> — audio transcription, email auto-reply drafting, social-media automation, custom AI agents, AI website builders, Shopify product automation, and smart visual insights — and shipped n8n workflows for daily content publishing (Google/LinkedIn/OpenAI) + Copilot Studio agents.</p>
+        <div class="metrics"><span>n8n</span><span>Replit</span><span>Lovable</span><span>Copilot Studio</span></div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="tag">GraviLog · Healthcare AI &nbsp;<span class="scope ent">CLINICAL</span></div>
+        <h4>Fetal-Ultrasound Segmentation</h4>
+        <p>An <b>Attention U-Net + EfficientNet-B3</b> segmentation model reaching <b>0.75 mean Dice</b> across 1,588 images / 169 patients, with patient-level splits and mixed-precision training, plus a clinical inference pipeline with Grad-CAM explainability and structured measurement extraction.</p>
+        <div class="metrics"><span><b>0.75</b> mean Dice</span><span>1,588 images</span><span>Grad-CAM</span></div>
+        <div class="stack"><span>PyTorch</span><span>Attention U-Net</span><span>EfficientNet-B3</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section id="projects" style="background:var(--bg-soft)">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-tag">// 04 — projects</div>
-      <h2 class="sec-title">Selected open-source projects</h2>
-      <p class="sec-sub">A sample of real, public projects — computer vision, RAG agents, and ML. Full source on GitHub.</p>
+      <div class="sec-tag">// 05 — open source</div>
+      <h2 class="sec-title">Open-source &amp; research projects</h2>
+      <p class="sec-sub">Public projects with full source on GitHub — computer vision, RAG agents, NLP and ML.</p>
     </div>
     <div class="proj-grid">
 
@@ -439,7 +541,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 <section id="live">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-tag">// 05 — live &amp; automation</div>
+      <div class="sec-tag">// 06 — live &amp; automation</div>
       <h2 class="sec-title">Live AI &amp; automation</h2>
       <p class="sec-sub">Publicly accessible AI apps and automation workflows you can try right now.</p>
     </div>
@@ -463,7 +565,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 <section id="publications" style="background:var(--bg-soft)">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-tag">// 06 — publications &amp; awards</div>
+      <div class="sec-tag">// 07 — publications &amp; awards</div>
       <h2 class="sec-title">Research &amp; recognition</h2>
     </div>
     <div class="pub-grid">
