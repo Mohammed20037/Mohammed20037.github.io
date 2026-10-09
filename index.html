@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mohammed Haitham El Zamzamy — AI Engineer</title>
+<title>Mohammed Haitham El Zamzamy · AI Engineer</title>
 <meta name="description" content="AI Engineer specializing in LLMs & RAG, Computer Vision, and production Full-Stack. Two IEEE papers, national AI Olympiad medalist, builder of ~15 production systems." />
 <meta name="author" content="Mohammed Haitham El Zamzamy" />
 <!-- Open Graph -->
-<meta property="og:title" content="Mohammed Haitham El Zamzamy — AI Engineer" />
+<meta property="og:title" content="Mohammed Haitham El Zamzamy · AI Engineer" />
 <meta property="og:description" content="LLMs & RAG · Computer Vision · Full-Stack · MLOps. Two IEEE papers, AI Olympiad medalist, ~15 production systems shipped." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
 <style>
 :root{
@@ -195,6 +195,28 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
 .reveal.in{opacity:1;transform:none}
+
+/* LANGUAGE TOGGLE + RTL */
+.langtog{background:var(--card);border:1px solid var(--border-v);color:var(--text);font:inherit;
+  font-size:13.5px;font-weight:700;padding:7px 14px;border-radius:9px;cursor:pointer;transition:.15s;margin-left:auto;margin-right:10px}
+.langtog:hover{border-color:var(--accent);color:var(--accent2)}
+html[dir=rtl]{direction:rtl}
+html[dir=rtl] body,html[dir=rtl] .sub,html[dir=rtl] .about p,html[dir=rtl] .proj p,html[dir=rtl] .proj h4,
+html[dir=rtl] .exp li,html[dir=rtl] .exp .role-sub,html[dir=rtl] .sec-sub,html[dir=rtl] .sec-title,
+html[dir=rtl] .feature p,html[dir=rtl] .feature h4,html[dir=rtl] .pub p,html[dir=rtl] .pub h4,
+html[dir=rtl] .flag-intro p,html[dir=rtl] .contact p,html[dir=rtl] .contact h2,html[dir=rtl] .quickfacts h4,
+html[dir=rtl] .qf-row,html[dir=rtl] .skill-card h4,html[dir=rtl] .exp h4,html[dir=rtl] .eyebrow,
+html[dir=rtl] .loc,html[dir=rtl] .stat .l,html[dir=rtl] .nav-links,html[dir=rtl] h1{font-family:'Cairo','Inter',system-ui,sans-serif}
+html[dir=rtl] .sec-tag{font-family:'Cairo',monospace;letter-spacing:0}
+html[dir=rtl] .timeline{padding-left:0;padding-right:28px}
+html[dir=rtl] .timeline::before{left:auto;right:7px}
+html[dir=rtl] .exp::before{left:auto;right:-28px}
+html[dir=rtl] .exp li{padding-left:0;padding-right:22px}
+html[dir=rtl] .exp li::before{content:"◂";left:auto;right:0}
+html[dir=rtl] .proj p,html[dir=rtl] .proj h4,html[dir=rtl] .sub,html[dir=rtl] .about p,
+html[dir=rtl] .sec-sub,html[dir=rtl] .flag-intro p,html[dir=rtl] .feature p,html[dir=rtl] .pub p{text-align:right}
+html[dir=rtl] .qf-row span:last-child{text-align:left}
+html[dir=rtl] .langtog{margin-left:10px;margin-right:auto}
 </style>
 </head>
 <body>
@@ -211,6 +233,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
       <a href="#live">Live&nbsp;AI</a>
       <a href="#contact">Contact</a>
     </div>
+    <button class="langtog" id="langToggle" onclick="toggleLang()">العربية</button>
     <a class="nav-cta" href="#contact">Get in touch</a>
     <button class="burger" onclick="document.querySelector('.nav-links').style.display='flex'">☰</button>
   </div>
@@ -220,8 +243,8 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
   <div class="wrap">
     <div class="eyebrow"><span class="dot"></span> Available immediately · Remote or on-site</div>
     <h1>Mohammed Haitham<br><span class="g">El Zamzamy</span></h1>
-    <p class="sub"><b>AI Engineer</b> building production systems across <b>LLMs &amp; RAG</b>, <b>Computer Vision</b>, and <b>Full-Stack</b> — from prompt design through deployment and live incident response.</p>
-    <p class="loc">📍 Cairo, Egypt &nbsp;·&nbsp; 🎓 BSc Artificial Intelligence &nbsp;·&nbsp; 📄 2× IEEE-published &nbsp;·&nbsp; 🏅 National AI Olympiad — 2nd place</p>
+    <p class="sub"><b>AI Engineer</b> building production systems across <b>LLMs &amp; RAG</b>, <b>Computer Vision</b>, and <b>Full-Stack</b> · from prompt design through deployment and live incident response.</p>
+    <p class="loc">📍 Cairo, Egypt &nbsp;· &nbsp; 🎓 BSc Artificial Intelligence &nbsp;· &nbsp; 📄 2× IEEE-published &nbsp;· &nbsp; 🏅 National AI Olympiad · 2nd place</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="#live">🚀 See live AI demo</a>
       <a class="btn btn-ghost" href="#projects">View projects</a>
@@ -247,13 +270,13 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 <section id="about">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-tag">// 01 — about</div>
+      <div class="sec-tag">ABOUT</div>
       <h2 class="sec-title">AI engineer with a ship-to-production discipline</h2>
     </div>
     <div class="about-grid about reveal">
       <div>
         <p>I'm an AI Engineer and full-stack builder with <b>two IEEE-published deep-learning papers</b> and a <b>national AI Olympiad medal (2nd place)</b> across Computer Vision, Embedded Systems, and Cybersecurity.</p>
-        <p>As the <b>first and sole engineer</b> at a Saudi ride-hailing operator, I designed, built, and operate its entire internal software stack — roughly <b>15 production systems</b> spanning customer support, CRM, AI driver-screening, incentives, dispatch, and internal communications — while coordinating and mentoring a 3-person operations team.</p>
+        <p>As the <b>first and sole engineer</b> at a Saudi ride-hailing operator, I designed, built, and operate its entire internal software stack · roughly <b>15 production systems</b> spanning customer support, CRM, AI driver-screening, incentives, dispatch, and internal communications · while coordinating and mentoring a 3-person operations team.</p>
         <p>I work deep across <b>LLMs &amp; RAG</b>, <b>computer vision</b>, and production <b>full-stack engineering</b> (TypeScript, Python, React, Next.js, PostgreSQL), with a test-heavy, ship-to-production mindset: migrations, deployments, API rotations, and live as-a-user verification before every release.</p>
       </div>
       <div class="quickfacts">
@@ -272,7 +295,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 <section id="skills" style="background:var(--bg-soft)">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-tag">// 02 — skills</div>
+      <div class="sec-tag">SKILLS</div>
       <h2 class="sec-title">Technical toolkit</h2>
     </div>
     <div class="skill-grid">
@@ -313,23 +336,23 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 <section id="experience">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-tag">// 03 — experience</div>
+      <div class="sec-tag">EXPERIENCE</div>
       <h2 class="sec-title">Where I've shipped</h2>
     </div>
     <div class="timeline">
       <div class="exp reveal">
-        <div class="top"><h4>AI &amp; Full-Stack Engineer · <span class="co">SHEGO</span></h4><span class="when">Jun 2026 — Present</span></div>
-        <div class="role-sub">Women-only ride-hailing operator (3 regional companies on ONDE). First &amp; sole engineer — own the entire internal stack.</div>
+        <div class="top"><h4>AI &amp; Full-Stack Engineer · <span class="co">SHEGO</span></h4><span class="when">Jun 2026 · Present</span></div>
+        <div class="role-sub">Women-only ride-hailing operator (3 regional companies on ONDE). First &amp; sole engineer · own the entire internal stack.</div>
         <ul>
-          <li>Designed, built &amp; operate <b>~15 Arabic-first production systems</b> — architecture, migrations, deployment &amp; live incident response — and mentor a 3-person ops &amp; content team.</li>
-          <li>Flagship <b>customer-support + CRM platform</b>: 195 PostgreSQL tables, 122 React pages, 91 API modules, ~7,500 live tickets, advisory-lock auto-assignment engine, SLA escalation, 84-toggle RBAC, 27-section QA — gated by <b>2,300+ automated tests</b> on every deploy.</li>
-          <li>Built an <b>AI driver-onboarding &amp; compliance system</b>: VLM document extraction (Gemini + GPT-4o) from Saudi licenses/IDs/iqamas, Arabic-name gender fusion, WASL/TGA decision engine — <b>1,664 tests</b>, remediated ~5,000 drivers, caught real identity fraud.</li>
+          <li>Designed, built &amp; operate <b>~15 Arabic-first production systems</b> · architecture, migrations, deployment &amp; live incident response · and mentor a 3-person ops &amp; content team.</li>
+          <li>Flagship <b>customer-support + CRM platform</b>: 195 PostgreSQL tables, 122 React pages, 91 API modules, ~7,500 live tickets, advisory-lock auto-assignment engine, SLA escalation, 84-toggle RBAC, 27-section QA · gated by <b>2,300+ automated tests</b> on every deploy.</li>
+          <li>Built an <b>AI driver-onboarding &amp; compliance system</b>: VLM document extraction (Gemini + GPT-4o) from Saudi licenses/IDs/iqamas, Arabic-name gender fusion, WASL/TGA decision engine · <b>1,664 tests</b>, remediated ~5,000 drivers, caught real identity fraud.</li>
           <li>Shipped an <b>AI/OCR financial-verification pipeline</b> (GPT-4o vision reads IBAN/amount/beneficiary) and a confidence-gated <b>AI auto-reply</b> system with customer memory &amp; a usage-cost ledger.</li>
           <li>Built driver <b>incentive &amp; retention</b> (append-only money ledger, serializable txns, Gemini smart-surge), <b>demand forecasting &amp; dispatch</b> (Poisson + Uber H3), and an automated <b>leads pipeline</b> (Meta/TikTok/Snapchat lead ads → WhatsApp).</li>
         </ul>
       </div>
       <div class="exp reveal">
-        <div class="top"><h4>AI Engineer (Healthcare) · <span class="co">GraviLog</span></h4><span class="when">Oct 2025 — Present</span></div>
+        <div class="top"><h4>AI Engineer (Healthcare) · <span class="co">GraviLog</span></h4><span class="when">Oct 2025 · Present</span></div>
         <div class="role-sub">Contract</div>
         <ul>
           <li>Built a <b>fetal-ultrasound segmentation model</b> (Attention U-Net + EfficientNet-B3) reaching <b>0.75 mean Dice</b> across 1,588 images / 169 patients, with patient-level splits &amp; mixed-precision training.</li>
@@ -337,23 +360,23 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
         </ul>
       </div>
       <div class="exp reveal">
-        <div class="top"><h4>AI Engineer · <span class="co">EVUNITY</span></h4><span class="when">Nov 2025 — Sep 2026</span></div>
+        <div class="top"><h4>AI Engineer · <span class="co">EVUNITY</span></h4><span class="when">Nov 2025 · Sep 2026</span></div>
         <div class="role-sub">On-site, Cairo</div>
         <ul>
-          <li>Build AI-driven <b>automation workflows</b> and web-based AI tools — LLM components, OAuth API connections &amp; intelligent backends — from prompt design through deployment.</li>
+          <li>Build AI-driven <b>automation workflows</b> and web-based AI tools · LLM components, OAuth API connections &amp; intelligent backends · from prompt design through deployment.</li>
           <li>Stood up <b>AABAR Mentor</b> (mentor.aabar.io) as a separate Go + React deployment on DigitalOcean with its own DB, SSO &amp; GPT-4 flow, live over HTTPS.</li>
         </ul>
       </div>
       <div class="exp reveal">
-        <div class="top"><h4>AI Engineer (Automation) · <span class="co">Exavo.ai</span></h4><span class="when">Sep 2025 — Jun 2026</span></div>
+        <div class="top"><h4>AI Engineer (Automation) · <span class="co">Exavo.ai</span></h4><span class="when">Sep 2025 · Jun 2026</span></div>
         <div class="role-sub">Remote, Contract</div>
         <ul>
-          <li>Contributed to <b>7 production AI services</b> — audio transcription, email auto-reply drafting, social-media automation, custom AI agents, AI website builders, Shopify automation — using <b>n8n</b>, Replit &amp; Lovable.</li>
+          <li>Contributed to <b>7 production AI services</b> · audio transcription, email auto-reply drafting, social-media automation, custom AI agents, AI website builders, Shopify automation · using <b>n8n</b>, Replit &amp; Lovable.</li>
           <li>Built &amp; deployed <b>n8n workflows</b> for daily content publishing (Google, LinkedIn, OpenAI APIs end-to-end) and reusable agents in Microsoft Copilot Studio.</li>
         </ul>
       </div>
       <div class="exp reveal">
-        <div class="top"><h4>AI Engineering Intern · <span class="co">Algoriza / DMC-CURVE / Slash Hub</span></h4><span class="when">2024 — 2025</span></div>
+        <div class="top"><h4>AI Engineering Intern · <span class="co">Algoriza / DMC-CURVE / Slash Hub</span></h4><span class="when">2024 · 2025</span></div>
         <div class="role-sub">Remote &amp; Hybrid</div>
         <ul>
           <li>ML/LLM prototypes &amp; model evaluation (PyTorch, scikit-learn), <b>RAG proofs-of-concept</b> with vector stores &amp; conversational agents, and CNN models for product-image recognition &amp; visual-similarity recommendation.</li>
@@ -366,12 +389,12 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 <section id="work">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-tag">// 04 — flagship work</div>
+      <div class="sec-tag">FLAGSHIP WORK</div>
       <h2 class="sec-title">Production systems I designed, built &amp; operate</h2>
-      <p class="sec-sub">Real, high-scale systems running live in production. Enterprise &amp; internal platforms are proprietary — shown here with architecture and hard metrics rather than public links.</p>
+      <p class="sec-sub">Real, high-scale systems running live in production. Enterprise &amp; internal platforms are proprietary · shown here with architecture and hard metrics rather than public links.</p>
     </div>
     <div class="flag-intro reveal">
-      <p>🚗 As the <b>first and sole engineer at SHEGO</b> (a Saudi women-only ride-hailing operator on the ONDE platform), I designed, built, and operate the <b>entire internal software stack — roughly 15 Arabic-first production systems</b> — owning architecture, 160+ database migrations, deployment, API-key rotation, and live incident response, while mentoring a 3-person ops &amp; content team. A selection below.</p>
+      <p>🚗 As the <b>first and sole engineer at SHEGO</b> (a Saudi women-only ride-hailing operator on the ONDE platform), I designed, built, and operate the <b>entire internal software stack · roughly 15 Arabic-first production systems</b> · owning architecture, 160+ database migrations, deployment, API-key rotation, and live incident response, while mentoring a 3-person ops &amp; content team. A selection below.</p>
     </div>
     <div class="proj-grid">
 
@@ -410,7 +433,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
       <div class="proj reveal">
         <div class="tag">SHEGO · Data / ML &nbsp;<span class="scope priv">🔒 PRIVATE</span></div>
         <h4>Demand Forecasting &amp; Dispatch</h4>
-        <p>Demand forecasting with Poisson modeling over <b>Uber H3</b> geospatial zones, a forecast-accuracy A/B ledger, and a Google Maps operations console — plus an automated leads pipeline ingesting Meta, TikTok &amp; Snapchat lead ads into WhatsApp recruitment templates.</p>
+        <p>Demand forecasting with Poisson modeling over <b>Uber H3</b> geospatial zones, a forecast-accuracy A/B ledger, and a Google Maps operations console · plus an automated leads pipeline ingesting Meta, TikTok &amp; Snapchat lead ads into WhatsApp recruitment templates.</p>
         <div class="metrics"><span>Poisson model</span><span>Uber H3 zones</span><span>A/B ledger</span></div>
         <div class="stack"><span>Python</span><span>Uber H3</span><span>Google Maps</span><span>Meta/TikTok APIs</span></div>
       </div>
@@ -425,8 +448,8 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 
       <div class="proj reveal">
         <div class="tag">EVUNITY · Product &nbsp;<span class="scope live">🟢 LIVE</span></div>
-        <h4>AABAR Mentor — AI Behavior Coach</h4>
-        <p>Stood up <b>AABAR Mentor</b> as a separate Go + React deployment on a DigitalOcean droplet with its own database, preserved SSO and a GPT-4 flow — live over HTTPS as a client-facing AI coaching product.</p>
+        <h4>AABAR Mentor · AI Behavior Coach</h4>
+        <p>Stood up <b>AABAR Mentor</b> as a separate Go + React deployment on a DigitalOcean droplet with its own database, preserved SSO and a GPT-4 flow · live over HTTPS as a client-facing AI coaching product.</p>
         <div class="metrics"><span>Go + React</span><span>SSO</span><span>GPT-4</span><span>DigitalOcean</span></div>
         <div class="links"><a href="https://mentor.aabar.io" target="_blank">↗ mentor.aabar.io</a></div>
       </div>
@@ -434,7 +457,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
       <div class="proj reveal">
         <div class="tag">Exavo.ai · AI Automation &nbsp;<span class="scope ent">7 SERVICES</span></div>
         <h4>Production AI Services &amp; Automations</h4>
-        <p>Contributed to <b>7 production AI services</b> — audio transcription, email auto-reply drafting, social-media automation, custom AI agents, AI website builders, Shopify product automation, and smart visual insights — and shipped n8n workflows for daily content publishing (Google/LinkedIn/OpenAI) + Copilot Studio agents.</p>
+        <p>Contributed to <b>7 production AI services</b> · audio transcription, email auto-reply drafting, social-media automation, custom AI agents, AI website builders, Shopify product automation, and smart visual insights · and shipped n8n workflows for daily content publishing (Google/LinkedIn/OpenAI) + Copilot Studio agents.</p>
         <div class="metrics"><span>n8n</span><span>Replit</span><span>Lovable</span><span>Copilot Studio</span></div>
       </div>
 
@@ -453,9 +476,9 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 <section id="projects" style="background:var(--bg-soft)">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-tag">// 05 — open source</div>
+      <div class="sec-tag">OPEN SOURCE</div>
       <h2 class="sec-title">Open-source &amp; research projects</h2>
-      <p class="sec-sub">Public projects with full source on GitHub — computer vision, RAG agents, NLP and ML.</p>
+      <p class="sec-sub">Public projects with full source on GitHub · computer vision, RAG agents, NLP and ML.</p>
     </div>
     <div class="proj-grid">
 
@@ -470,7 +493,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
       <div class="proj reveal">
         <div class="tag">RAG · LLM · Live App</div>
         <h4>GCC Market-Entry Certification Assistant</h4>
-        <p>Chat-first GCC product-compliance assistant: deterministic 3-stage decision engine, bilingual EN/AR chat, OCR pipeline — $0 per query. FastAPI + vanilla JS.</p>
+        <p>Chat-first GCC product-compliance assistant: deterministic 3-stage decision engine, bilingual EN/AR chat, OCR pipeline · $0 per query. FastAPI + vanilla JS.</p>
         <div class="stack"><span>FastAPI</span><span>RAG</span><span>OCR</span><span>Bilingual</span></div>
         <div class="links"><a href="https://github.com/Mohammed20037/gcc-market-entry-certification-assistant" target="_blank">↗ GitHub</a><a href="#live">▶ Live demo</a></div>
       </div>
@@ -494,7 +517,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
       <div class="proj reveal">
         <div class="tag">Computer Vision</div>
         <h4>Equipment Utilization &amp; Activity Classification</h4>
-        <p>Real-time heavy-equipment activity tracking prototype — YOLOv8 detection, custom hybrid tracker, masked optical flow, Kafka streaming, PostgreSQL &amp; a Streamlit dashboard.</p>
+        <p>Real-time heavy-equipment activity tracking prototype · YOLOv8 detection, custom hybrid tracker, masked optical flow, Kafka streaming, PostgreSQL &amp; a Streamlit dashboard.</p>
         <div class="stack"><span>YOLOv8</span><span>Kafka</span><span>Optical Flow</span></div>
         <div class="links"><a href="https://github.com/Mohammed20037/Equipment-Utilization-Activity-Classification-Prototype" target="_blank">↗ GitHub</a></div>
       </div>
@@ -517,7 +540,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 
       <div class="proj reveal">
         <div class="tag">Signal Processing</div>
-        <h4>Multi-Sensor Fusion — Vehicle Distance</h4>
+        <h4>Multi-Sensor Fusion · Vehicle Distance</h4>
         <p>Kalman filtering and signal integration across multiple sensor inputs for robust vehicle-distance estimation.</p>
         <div class="stack"><span>Kalman Filter</span><span>NumPy</span><span>Sensor Fusion</span></div>
         <div class="links"><a href="https://github.com/Mohammed20037/Multi-Sensor-Fusion-for-Vehicle-Distance-Estimation" target="_blank">↗ GitHub</a></div>
@@ -542,7 +565,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
       <div class="proj reveal">
         <div class="tag">Machine Learning · Regression</div>
         <h4>Freight Rate Prediction</h4>
-        <p>End-to-end ML pipeline predicting freight shipping rates from historical logistics data — feature engineering, model training and evaluation.</p>
+        <p>End-to-end ML pipeline predicting freight shipping rates from historical logistics data · feature engineering, model training and evaluation.</p>
         <div class="stack"><span>Python</span><span>scikit-learn</span><span>Pandas</span></div>
         <div class="links"><a href="https://github.com/Mohammed20037/freight-rate-prediction" target="_blank">↗ GitHub</a></div>
       </div>
@@ -550,7 +573,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
       <div class="proj reveal">
         <div class="tag">Machine Learning · Fraud</div>
         <h4>Credit-Card Fraud Detection</h4>
-        <p>Supervised ML on imbalanced transaction data to flag fraudulent charges — EDA, resampling, and multiple classifier comparison.</p>
+        <p>Supervised ML on imbalanced transaction data to flag fraudulent charges · EDA, resampling, and multiple classifier comparison.</p>
         <div class="stack"><span>scikit-learn</span><span>Imbalanced data</span><span>EDA</span></div>
         <div class="links"><a href="https://github.com/Mohammed20037/Credit_Card_Fraud_Detection_Using_Machine_Learning" target="_blank">↗ GitHub</a></div>
       </div>
@@ -573,27 +596,27 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 <section id="live">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-tag">// 06 — live &amp; automation</div>
+      <div class="sec-tag">LIVE &amp; AUTOMATION</div>
       <h2 class="sec-title">Live AI &amp; automation</h2>
       <p class="sec-sub">Publicly accessible AI apps and automation workflows you can try right now.</p>
     </div>
     <div class="feature-grid">
       <div class="feature reveal">
         <div class="ic">🤗</div>
-        <h4>Live demo #1 — Text AI (NLP)</h4>
-        <p>A real transformer for <b>sentiment &amp; emotion</b> (English &amp; Arabic) running 100% in-browser via Transformers.js — no server, no API key. A live, public Hugging Face Space.</p>
+        <h4>Live demo #1 · Text AI (NLP)</h4>
+        <p>A real transformer for <b>sentiment &amp; emotion</b> (English &amp; Arabic) running 100% in-browser via Transformers.js · no server, no API key. A live, public Hugging Face Space.</p>
         <a class="btn btn-primary" href="https://huggingface.co/spaces/mo1235555/text-ai-sentiment-emotion" target="_blank">Open live demo →</a>
       </div>
       <div class="feature reveal">
         <div class="ic">🎯</div>
-        <h4>Live demo #2 — Object Detection (CV)</h4>
-        <p>Upload any photo and a <b>DETR transformer</b> draws labeled bounding boxes — real computer vision running entirely in your browser. Ties to my YOLOv8 detection work.</p>
+        <h4>Live demo #2 · Object Detection (CV)</h4>
+        <p>Upload any photo and a <b>DETR transformer</b> draws labeled bounding boxes · real computer vision running entirely in your browser. Ties to my YOLOv8 detection work.</p>
         <a class="btn btn-primary" href="https://huggingface.co/spaces/mo1235555/object-detection-cv" target="_blank">Open live demo →</a>
       </div>
       <div class="feature reveal">
         <div class="ic">🔗</div>
         <h4>n8n automation workflows</h4>
-        <p>A published collection of production-style n8n automation workflows — AI content pipelines, lead-capture automations and LLM agents — with importable JSON, diagrams and docs.</p>
+        <p>A published collection of production-style n8n automation workflows · AI content pipelines, lead-capture automations and LLM agents · with importable JSON, diagrams and docs.</p>
         <a class="btn btn-primary" href="https://github.com/Mohammed20037/n8n-automation-workflows" target="_blank">Browse workflows →</a>
       </div>
     </div>
@@ -603,14 +626,14 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 <section id="publications" style="background:var(--bg-soft)">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="sec-tag">// 07 — publications &amp; awards</div>
+      <div class="sec-tag">PUBLICATIONS &amp; AWARDS</div>
       <h2 class="sec-title">Research &amp; recognition</h2>
     </div>
     <div class="pub-grid">
       <div class="pub reveal">
         <div class="badge">IEEE IMCOM 2026</div>
         <h4>Explainable Ensemble Deep Learning for Fruit Disease Detection</h4>
-        <p>Sustainable agriculture &amp; food-system resilience — <b>98.47% accuracy</b> with Grad-CAM explainability. Published on IEEE Xplore.</p>
+        <p>Sustainable agriculture &amp; food-system resilience · <b>98.47% accuracy</b> with Grad-CAM explainability. Published on IEEE Xplore.</p>
       </div>
       <div class="pub reveal">
         <div class="badge">IEEE CSDGAIS 2024</div>
@@ -619,7 +642,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
       </div>
       <div class="pub reveal">
         <div class="badge">🏅 AWARD · EGYPT 2024</div>
-        <h4>AI Olympiad — 2nd Place Nationally</h4>
+        <h4>AI Olympiad · 2nd Place Nationally</h4>
         <p>Across Computer Vision, Embedded Systems, and Cybersecurity.</p>
       </div>
       <div class="pub reveal">
@@ -635,7 +658,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
   <div class="wrap">
     <div class="contact reveal">
       <h2>Let's build something.</h2>
-      <p>Open to AI Engineer / Full-Stack roles — remote or on-site. Available immediately.</p>
+      <p>Open to AI Engineer / Full-Stack roles · remote or on-site. Available immediately.</p>
       <div class="cta-row" style="justify-content:center">
         <a class="btn btn-primary" href="mailto:mohammedhaitham17@outlook.com">✉️ Email me</a>
         <a class="btn btn-ghost" href="https://linkedin.com/in/mohammed-zamzamy" target="_blank">💼 LinkedIn</a>
@@ -647,7 +670,7 @@ footer a{color:var(--muted)}footer a:hover{color:var(--text)}
 
 <footer>
   <div class="wrap">
-    <p>© <span id="yr"></span> Mohammed Haitham El Zamzamy · Built with plain HTML/CSS — hosted free on GitHub Pages.</p>
+    <p>© <span id="yr"></span> Mohammed Haitham El Zamzamy · Built with plain HTML/CSS · hosted free on GitHub Pages.</p>
     <p style="margin-top:8px">
       <a href="mailto:mohammedhaitham17@outlook.com">Email</a> ·
       <a href="https://github.com/Mohammed20037" target="_blank">GitHub</a> ·
@@ -664,6 +687,158 @@ const io = new IntersectionObserver((es)=>{
   es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay=(i%3*60)+'ms'; io.observe(el); });
+</script>
+
+<script>
+/* ---- Bilingual EN <-> AR with RTL ---- */
+const AR = {
+  // nav
+  "About":"نبذة","Systems":"الأنظمة","Open Source":"مفتوح المصدر","Live AI":"ذكاء اصطناعي حي","Contact":"تواصل","Get in touch":"تواصل معي",
+  // hero
+  "Available immediately · Remote or on-site":"متاح للعمل فورًا · عن بُعد أو من المقر",
+  "AI Engineer building production systems across LLMs & RAG, Computer Vision, and Full-Stack · from prompt design through deployment and live incident response.":"مهندس ذكاء اصطناعي يبني أنظمة إنتاجية في نماذج اللغة الكبيرة وRAG ورؤية الحاسوب وتطوير الويب المتكامل · من تصميم الموجّهات حتى النشر والاستجابة الحيّة للأعطال.",
+  "📍 Cairo, Egypt · 🎓 BSc Artificial Intelligence · 📄 2× IEEE-published · 🏅 National AI Olympiad · 2nd place":"📍 القاهرة، مصر · 🎓 بكالوريوس ذكاء اصطناعي · 📄 بحثان منشوران في IEEE · 🏅 المركز الثاني في أولمبياد الذكاء الاصطناعي الوطني",
+  "🚀 See live AI demo":"🚀 جرّب العرض الحيّ","View projects":"تصفّح المشاريع","📄 Download CV":"📄 حمّل السيرة الذاتية",
+  "Production systems shipped":"أنظمة إنتاجية مُطلَقة","IEEE-published papers":"أبحاث منشورة في IEEE","Best model accuracy (IEEE)":"أفضل دقة نموذج (IEEE)","Automated tests authored":"اختبارات آلية مكتوبة",
+  // section tags
+  "ABOUT":"نبذة","SKILLS":"المهارات","EXPERIENCE":"الخبرة","FLAGSHIP WORK":"أبرز الأعمال","OPEN SOURCE":"مفتوح المصدر","LIVE & AUTOMATION":"ذكاء حيّ وأتمتة","PUBLICATIONS & AWARDS":"الأبحاث والجوائز",
+  // section titles
+  "AI engineer with a ship-to-production discipline":"مهندس ذكاء اصطناعي بعقلية الشحن إلى الإنتاج",
+  "Technical toolkit":"الأدوات التقنية","Where I've shipped":"أين عملت وأطلقت",
+  "Production systems I designed, built & operate":"أنظمة إنتاجية صمّمتها وبنيتها وأُشغّلها",
+  "Open-source & research projects":"مشاريع مفتوحة المصدر وبحثية","Live AI & automation":"ذكاء اصطناعي حيّ وأتمتة","Research & recognition":"البحث والتقدير",
+  // section subs
+  "Real, high-scale systems running live in production. Enterprise & internal platforms are proprietary · shown here with architecture and hard metrics rather than public links.":"أنظمة حقيقية عالية النطاق تعمل في الإنتاج. الأنظمة المؤسسية والداخلية مملوكة للشركات · تُعرض هنا بالبنية والأرقام بدل الروابط العامة.",
+  "Public projects with full source on GitHub · computer vision, RAG agents, NLP and ML.":"مشاريع عامة بكامل الكود على GitHub · رؤية حاسوب، ووكلاء RAG، ومعالجة لغة، وتعلم آلي.",
+  "Publicly accessible AI apps and automation workflows you can try right now.":"تطبيقات ذكاء اصطناعي ومسارات أتمتة عامة يمكنك تجربتها الآن.",
+  // about
+  "I'm an AI Engineer and full-stack builder with two IEEE-published deep-learning papers and a national AI Olympiad medal (2nd place) across Computer Vision, Embedded Systems, and Cybersecurity.":"أنا مهندس ذكاء اصطناعي ومطوّر متكامل، لديّ بحثان منشوران في IEEE في التعلم العميق وميدالية في أولمبياد الذكاء الاصطناعي الوطني (المركز الثاني) في رؤية الحاسوب والأنظمة المدمجة والأمن السيبراني.",
+  "As the first and sole engineer at a Saudi ride-hailing operator, I designed, built, and operate its entire internal software stack · roughly 15 production systems spanning customer support, CRM, AI driver-screening, incentives, dispatch, and internal communications · while coordinating and mentoring a 3-person operations team.":"بصفتي أول وأوحد مهندس في شركة نقل سعودية، صمّمت وبنيت وأُشغّل كامل حزمة البرمجيات الداخلية · نحو 15 نظامًا إنتاجيًا تشمل دعم العملاء وإدارة العلاقات وفحص السائقين بالذكاء الاصطناعي والحوافز والتوزيع والتواصل الداخلي · مع قيادة وتوجيه فريق عمليات ومحتوى من 3 أشخاص.",
+  "I work deep across LLMs & RAG, computer vision, and production full-stack engineering (TypeScript, Python, React, Next.js, PostgreSQL), with a test-heavy, ship-to-production mindset: migrations, deployments, API rotations, and live as-a-user verification before every release.":"أعمل بعمق في نماذج اللغة الكبيرة وRAG ورؤية الحاسوب وهندسة الويب المتكاملة الإنتاجية (TypeScript وPython وReact وNext.js وPostgreSQL) بعقلية قائمة على الاختبارات والشحن إلى الإنتاج: الترحيلات والنشر وتدوير المفاتيح والتحقق الحيّ كمستخدم قبل كل إصدار.",
+  "Quick facts":"نبذة سريعة",
+  "Role":"الدور","AI / Full-Stack Engineer":"مهندس ذكاء اصطناعي / ويب متكامل",
+  "Based in":"المقر","Cairo, Egypt":"القاهرة، مصر",
+  "Education":"التعليم","BSc Artificial Intelligence":"بكالوريوس ذكاء اصطناعي",
+  "Focus":"التخصص","LLMs · CV · MLOps":"نماذج لغوية · رؤية حاسوب · MLOps",
+  "Languages":"اللغات","Arabic · English":"العربية · الإنجليزية",
+  "Availability":"الإتاحة","Immediate":"فوري",
+  // skills
+  "🧠 AI & Machine Learning":"<span class=\"ic\">🧠</span> الذكاء الاصطناعي والتعلم الآلي",
+  "⚙️ Backend & Languages":"<span class=\"ic\">⚙️</span> الواجهة الخلفية واللغات",
+  "🎨 Frontend & Data":"<span class=\"ic\">🎨</span> الواجهة الأمامية والبيانات",
+  "☁️ Cloud, DevOps & Automation":"<span class=\"ic\">☁️</span> السحابة وDevOps والأتمتة",
+  // experience
+  "AI & Full-Stack Engineer · SHEGO":"مهندس ذكاء اصطناعي وويب متكامل · <span class=\"co\">SHEGO</span>",
+  "AI Engineer (Healthcare) · GraviLog":"مهندس ذكاء اصطناعي (رعاية صحية) · <span class=\"co\">GraviLog</span>",
+  "AI Engineer · EVUNITY":"مهندس ذكاء اصطناعي · <span class=\"co\">EVUNITY</span>",
+  "AI Engineer (Automation) · Exavo.ai":"مهندس ذكاء اصطناعي (أتمتة) · <span class=\"co\">Exavo.ai</span>",
+  "AI Engineering Intern · Algoriza / DMC-CURVE / Slash Hub":"متدرّب هندسة ذكاء اصطناعي · <span class=\"co\">Algoriza / DMC-CURVE / Slash Hub</span>",
+  "Women-only ride-hailing operator (3 regional companies on ONDE). First & sole engineer · own the entire internal stack.":"شركة نقل نسائية (3 شركات إقليمية على ONDE). أول وأوحد مهندس · أملك كامل الحزمة الداخلية.",
+  "Contract":"تعاقد","On-site, Cairo":"حضوري، القاهرة","Remote, Contract":"عن بُعد، تعاقد","Remote & Hybrid":"عن بُعد وهجين",
+  "Designed, built & operate ~15 Arabic-first production systems · architecture, migrations, deployment & live incident response · and mentor a 3-person ops & content team.":"صمّمت وبنيت وأُشغّل ~15 نظامًا إنتاجيًا باللغة العربية أولًا · البنية والترحيلات والنشر والاستجابة الحيّة للأعطال · وأوجّه فريق عمليات ومحتوى من 3 أشخاص.",
+  "Flagship customer-support + CRM platform: 195 PostgreSQL tables, 122 React pages, 91 API modules, ~7,500 live tickets, advisory-lock auto-assignment engine, SLA escalation, 84-toggle RBAC, 27-section QA · gated by 2,300+ automated tests on every deploy.":"منصة دعم العملاء + CRM الرئيسية: 195 جدول PostgreSQL، 122 صفحة React، 91 وحدة API، ~7,500 تذكرة حيّة، محرك تعيين تلقائي بأقفال advisory، تصعيد SLA، صلاحيات بـ84 مفتاحًا، وجودة من 27 قسمًا · محميّة بأكثر من 2,300 اختبار آلي عند كل نشر.",
+  "Built an AI driver-onboarding & compliance system: VLM document extraction (Gemini + GPT-4o) from Saudi licenses/IDs/iqamas, Arabic-name gender fusion, WASL/TGA decision engine · 1,664 tests, remediated ~5,000 drivers, caught real identity fraud.":"بنيت نظام تسجيل سائقين وفحص امتثال بالذكاء الاصطناعي: استخراج مستندات VLM (Gemini + GPT-4o) من الرخص والهويات والإقامات السعودية، دمج الجنس من الأسماء العربية، محرك قرار WASL/TGA · 1,664 اختبارًا، عالجت ~5,000 سائق، وكشفت احتيال هوية حقيقي.",
+  "Shipped an AI/OCR financial-verification pipeline (GPT-4o vision reads IBAN/amount/beneficiary) and a confidence-gated AI auto-reply system with customer memory & a usage-cost ledger.":"أطلقت خط تحقق مالي بالذكاء الاصطناعي/OCR (رؤية GPT-4o تقرأ الآيبان/المبلغ/المستفيد) ونظام رد آلي مُقيَّد بالثقة مع ذاكرة عملاء وسجل تكلفة استخدام.",
+  "Built driver incentive & retention (append-only money ledger, serializable txns, Gemini smart-surge), demand forecasting & dispatch (Poisson + Uber H3), and an automated leads pipeline (Meta/TikTok/Snapchat lead ads → WhatsApp).":"بنيت نظام حوافز واستبقاء للسائقين (سجل مالي append-only، معاملات serializable، تسعير ذكي بـGemini)، والتنبؤ بالطلب والتوزيع (Poisson + Uber H3)، وخط عملاء محتملين آلي (إعلانات Meta/TikTok/Snapchat → واتساب).",
+  "Built a fetal-ultrasound segmentation model (Attention U-Net + EfficientNet-B3) reaching 0.75 mean Dice across 1,588 images / 169 patients, with patient-level splits & mixed-precision training.":"بنيت نموذج تقطيع للموجات فوق الصوتية للجنين (Attention U-Net + EfficientNet-B3) بلغ 0.75 Dice على 1,588 صورة / 169 مريضًا، بتقسيم على مستوى المريض وتدريب mixed-precision.",
+  "Delivered an end-to-end clinical inference pipeline with Grad-CAM explainability and structured measurement extraction, focused on reproducibility.":"سلّمت خط استدلال سريري متكامل بتفسير Grad-CAM واستخراج قياسات منظّم، مع تركيز على قابلية التكرار.",
+  "Build AI-driven automation workflows and web-based AI tools · LLM components, OAuth API connections & intelligent backends · from prompt design through deployment.":"أبني مسارات أتمتة مدفوعة بالذكاء الاصطناعي وأدوات ويب · مكوّنات LLM واتصالات API عبر OAuth وخلفيات ذكية · من تصميم الموجّهات حتى النشر.",
+  "Stood up AABAR Mentor (mentor.aabar.io) as a separate Go + React deployment on DigitalOcean with its own DB, SSO & GPT-4 flow, live over HTTPS.":"أطلقت AABAR Mentor (mentor.aabar.io) كنشر مستقل بـGo + React على DigitalOcean بقاعدة بيانات خاصة وSSO وتدفق GPT-4، حيّ عبر HTTPS.",
+  "Contributed to 7 production AI services · audio transcription, email auto-reply drafting, social-media automation, custom AI agents, AI website builders, Shopify automation · using n8n, Replit & Lovable.":"ساهمت في 7 خدمات ذكاء اصطناعي إنتاجية · تفريغ صوتي، صياغة ردود بريد، أتمتة سوشيال ميديا، وكلاء مخصصون، بنّاؤو مواقع، أتمتة Shopify · باستخدام n8n وReplit وLovable.",
+  "Built & deployed n8n workflows for daily content publishing (Google, LinkedIn, OpenAI APIs end-to-end) and reusable agents in Microsoft Copilot Studio.":"بنيت ونشرت مسارات n8n للنشر اليومي للمحتوى (واجهات Google وLinkedIn وOpenAI كاملة) ووكلاء قابلين لإعادة الاستخدام في Microsoft Copilot Studio.",
+  "ML/LLM prototypes & model evaluation (PyTorch, scikit-learn), RAG proofs-of-concept with vector stores & conversational agents, and CNN models for product-image recognition & visual-similarity recommendation.":"نماذج أولية للتعلم الآلي ونماذج اللغة وتقييمها (PyTorch وscikit-learn)، وإثباتات مفهوم RAG مع مخازن متجهات ووكلاء محادثة، ونماذج CNN للتعرف على صور المنتجات والتوصية بالتشابه البصري.",
+  // flagship intro
+  "🚗 As the first and sole engineer at SHEGO (a Saudi women-only ride-hailing operator on the ONDE platform), I designed, built, and operate the entire internal software stack · roughly 15 Arabic-first production systems · owning architecture, 160+ database migrations, deployment, API-key rotation, and live incident response, while mentoring a 3-person ops & content team. A selection below.":"🚗 بصفتي أول وأوحد مهندس في SHEGO (شركة نقل نسائية سعودية على منصة ONDE)، صمّمت وبنيت وأُشغّل كامل حزمة البرمجيات الداخلية · نحو 15 نظامًا إنتاجيًا باللغة العربية أولًا · مالكًا للبنية وأكثر من 160 ترحيل قاعدة بيانات والنشر وتدوير المفاتيح والاستجابة الحيّة للأعطال، مع توجيه فريق عمليات ومحتوى من 3 أشخاص. مجموعة مختارة أدناه.",
+  // flagship cards
+  "Customer-Support Platform + CRM":"منصة دعم العملاء + CRM",
+  "End-to-end help desk and CRM ingesting WhatsApp & email into tickets, with an advisory-lock auto-assignment & routing engine, SLA escalation, a 84-toggle role-based access model, and a 27-section quality-evaluation system.":"مكتب مساعدة ونظام CRM متكامل يحوّل رسائل واتساب والبريد إلى تذاكر، مع محرك توزيع وتعيين تلقائي بأقفال advisory، وتصعيد SLA، ونموذج صلاحيات بـ84 مفتاحًا، ونظام تقييم جودة من 27 قسمًا.",
+  "AI Driver Onboarding & Compliance Screening":"تسجيل السائقين وفحص الامتثال بالذكاء الاصطناعي",
+  "Vision-language document extraction from Saudi licenses, national IDs & iqamas (Gemini + GPT-4o), Arabic-name gender fusion, and a WASL/TGA compliance decision engine verified row-for-row against the official Saudi spec. Caught real identity fraud.":"استخراج مستندات برؤية-لغة من الرخص والهويات والإقامات السعودية (Gemini + GPT-4o)، ودمج الجنس من الأسماء العربية، ومحرك قرار امتثال WASL/TGA مُتحقَّق سطرًا بسطر مقابل الوثيقة الرسمية. كشف احتيال هوية حقيقي.",
+  "AI/OCR Financial Verification + Auto-Reply":"التحقق المالي بالذكاء الاصطناعي/OCR + الرد الآلي",
+  "A GPT-4o vision pipeline that reads IBAN, amount & beneficiary from documents and matches them deterministically, plus a confidence-gated AI auto-reply system with per-customer memory and a token usage-cost ledger.":"خط معالجة برؤية GPT-4o يقرأ الآيبان والمبلغ والمستفيد من المستندات ويطابقها حتميًا، إضافة إلى نظام رد آلي مُقيَّد بالثقة مع ذاكرة لكل عميل وسجل تكلفة استخدام.",
+  "Driver Incentives & Smart-Surge Engine":"محرك الحوافز والتسعير الذكي للسائقين",
+  "A money-critical incentive & retention system with an append-only ledger and serializable transactions enforcing trip caps under concurrency, plus a Gemini-driven smart-surge engine issuing real driver payouts.":"نظام حوافز واستبقاء حسّاس ماليًا بسجل append-only ومعاملات serializable تفرض حدود الرحلات تحت التزامن، مع محرك تسعير ذكي مدعوم بـGemini يصرف مكافآت حقيقية.",
+  "Demand Forecasting & Dispatch":"التنبؤ بالطلب والتوزيع",
+  "Demand forecasting with Poisson modeling over Uber H3 geospatial zones, a forecast-accuracy A/B ledger, and a Google Maps operations console · plus an automated leads pipeline ingesting Meta, TikTok & Snapchat lead ads into WhatsApp recruitment templates.":"تنبؤ بالطلب بنمذجة Poisson فوق مناطق Uber H3 الجغرافية، وسجل دقة تنبؤ A/B، ولوحة عمليات Google Maps · مع خط عملاء محتملين آلي يجمع إعلانات Meta وTikTok وSnapchat في قوالب توظيف واتساب.",
+  "Internal Comms Platform + Ops Suite":"منصة التواصل الداخلي + حزمة العمليات",
+  "A custom Slack/Teams with real-time LiveKit audio & video for up to 100 participants, plus a CRM replacing Zoho (27 features on n8n), a request-lifecycle tracker (Postgres triggers + Gemini subtask splitter), a tasks & approval-chains system, a referral workspace, and a training-quiz platform.":"بديل Slack/Teams مخصص مع صوت وفيديو لحظي عبر LiveKit حتى 100 مشارك، إضافة إلى CRM يحل محل Zoho (27 ميزة على n8n)، ومتتبّع دورة حياة الطلبات (محفّزات Postgres + تقسيم مهام بـGemini)، ونظام مهام وسلاسل موافقات، ومساحة إحالات، ومنصة اختبارات تدريب.",
+  "AABAR Mentor · AI Behavior Coach":"AABAR Mentor · مدرّب سلوكي بالذكاء الاصطناعي",
+  "Stood up AABAR Mentor as a separate Go + React deployment on a DigitalOcean droplet with its own database, preserved SSO and a GPT-4 flow · live over HTTPS as a client-facing AI coaching product.":"أطلقت AABAR Mentor كنشر مستقل بـGo + React على خادم DigitalOcean بقاعدة بيانات خاصة، مع الحفاظ على SSO وتدفق GPT-4 · حيّ عبر HTTPS كمنتج تدريب موجّه للعملاء.",
+  "Production AI Services & Automations":"خدمات وأتمتة ذكاء اصطناعي إنتاجية",
+  "Contributed to 7 production AI services · audio transcription, email auto-reply drafting, social-media automation, custom AI agents, AI website builders, Shopify product automation, and smart visual insights · and shipped n8n workflows for daily content publishing (Google/LinkedIn/OpenAI) + Copilot Studio agents.":"ساهمت في 7 خدمات ذكاء اصطناعي إنتاجية · تفريغ صوتي، صياغة ردود بريد آلية، أتمتة سوشيال ميديا، وكلاء مخصصون، بنّاؤو مواقع، أتمتة منتجات Shopify، ورؤى بصرية ذكية · وأطلقت مسارات n8n للنشر اليومي (Google/LinkedIn/OpenAI) + وكلاء Copilot Studio.",
+  "Fetal-Ultrasound Segmentation":"تقطيع الموجات فوق الصوتية للجنين",
+  "An Attention U-Net + EfficientNet-B3 segmentation model reaching 0.75 mean Dice across 1,588 images / 169 patients, with patient-level splits and mixed-precision training, plus a clinical inference pipeline with Grad-CAM explainability and structured measurement extraction.":"نموذج تقطيع Attention U-Net + EfficientNet-B3 يبلغ 0.75 Dice على 1,588 صورة / 169 مريضًا، بتقسيم على مستوى المريض وتدريب mixed-precision، مع خط استدلال سريري بتفسير Grad-CAM واستخراج قياسات منظّم.",
+  // open-source cards
+  "Jet-Bridge & Boarding-Stairs Detection":"كشف جسر الطائرة وسلالم الصعود",
+  "Detects aircraft body type, jet-bridge and boarding-stairs connections from airport gate video. YOLOv8 segmentation + Groq LLaMA-4 Scout zero-shot vision + Streamlit UI.":"يكشف نوع جسم الطائرة ووصلات جسر الطائرة وسلالم الصعود من فيديو بوابة المطار. تقطيع YOLOv8 + رؤية Groq LLaMA-4 Scout صفرية + واجهة Streamlit.",
+  "GCC Market-Entry Certification Assistant":"مساعد شهادات دخول السوق الخليجي",
+  "Chat-first GCC product-compliance assistant: deterministic 3-stage decision engine, bilingual EN/AR chat, OCR pipeline · $0 per query. FastAPI + vanilla JS.":"مساعد امتثال لمنتجات الخليج يعتمد المحادثة: محرك قرار حتمي من 3 مراحل، محادثة ثنائية اللغة EN/AR، وخط OCR · بتكلفة 0 لكل استعلام. FastAPI + JS بسيط.",
+  "NovaBite Multi-Agent RAG":"نظام RAG متعدد الوكلاء NovaBite",
+  "LangChain orchestrator with intent classification, a RAG sub-agent (FAISS + text-embedding-3-small) for menu/policy queries, and an operations sub-agent with MCP-style tool calling for bookings & specials.":"منسّق LangChain مع تصنيف نية، ووكيل RAG فرعي (FAISS + text-embedding-3-small) لاستعلامات القائمة والسياسات، ووكيل عمليات باستدعاء أدوات بأسلوب MCP للحجوزات والعروض.",
+  "Synthetic Egyptian-Arabic Speech Dataset":"بيانات كلام مصرية عربية اصطناعية",
+  "Pipeline producing training-ready synthetic Egyptian-Arabic speech: LLM prompts → multi-voice TTS → automated Whisper QA → human review → HuggingFace export.":"خط لإنتاج بيانات كلام مصرية عربية جاهزة للتدريب: موجّهات LLM → TTS متعدد الأصوات → فحص آلي بـWhisper → مراجعة بشرية → تصدير إلى HuggingFace.",
+  "Equipment Utilization & Activity Classification":"تصنيف استخدام ونشاط المعدات",
+  "Real-time heavy-equipment activity tracking prototype · YOLOv8 detection, custom hybrid tracker, masked optical flow, Kafka streaming, PostgreSQL & a Streamlit dashboard.":"نموذج أولي لتتبع نشاط المعدات الثقيلة لحظيًا · كشف YOLOv8، متتبّع هجين مخصص، تدفق بصري مُقنّع، بث Kafka، PostgreSQL، ولوحة Streamlit.",
+  "Plant Disease Classification":"تصنيف أمراض النبات",
+  "Deep CNN models for plant-disease classification (the topic of my IEEE CSDGAIS 2024 paper on a novel CNN with L1 regularization). Includes an enhanced ensemble and a ResNet variant.":"نماذج CNN عميقة لتصنيف أمراض النبات (موضوع بحثي في IEEE CSDGAIS 2024 حول CNN جديد بتنظيم L1). يشمل نسخة مجمّعة محسّنة ونسخة ResNet.",
+  "BERT & GPT Fine-Tuning":"ضبط BERT وGPT",
+  "Transformer fine-tuning for sentiment & emotion detection using transfer learning and embedding extraction.":"ضبط المحوّلات لكشف المشاعر والعواطف عبر التعلم بالنقل واستخراج التضمينات.",
+  "Multi-Sensor Fusion · Vehicle Distance":"دمج حساسات متعدد · مسافة المركبة",
+  "Kalman filtering and signal integration across multiple sensor inputs for robust vehicle-distance estimation.":"ترشيح كالمان ودمج إشارات عبر مدخلات حساسات متعددة لتقدير مسافة المركبة بثبات.",
+  "Amazon Electronics Recommender":"نظام توصية إلكترونيات أمازون",
+  "Collaborative-filtering recommendation engine built on customer reviews and purchase behavior.":"محرك توصية بالترشيح التعاوني مبني على مراجعات العملاء وسلوك الشراء.",
+  "Product Image Classifier":"مصنّف صور المنتجات",
+  "CNN models for product-image recognition and a visual-similarity recommender, built from product-image datasets (Slash Hub).":"نماذج CNN للتعرف على صور المنتجات ومُوصٍّ بالتشابه البصري، مبنية من مجموعات صور المنتجات (Slash Hub).",
+  "Freight Rate Prediction":"التنبؤ بأسعار الشحن",
+  "End-to-end ML pipeline predicting freight shipping rates from historical logistics data · feature engineering, model training and evaluation.":"خط تعلم آلي متكامل يتنبأ بأسعار الشحن من بيانات لوجستية تاريخية · هندسة سمات وتدريب وتقييم نماذج.",
+  "Credit-Card Fraud Detection":"كشف احتيال البطاقات الائتمانية",
+  "Supervised ML on imbalanced transaction data to flag fraudulent charges · EDA, resampling, and multiple classifier comparison.":"تعلم آلي مُشرف على بيانات معاملات غير متوازنة لرصد العمليات الاحتيالية · تحليل استكشافي وإعادة أخذ عينات ومقارنة مصنّفات.",
+  "Medical Risk Prediction":"التنبؤ بالمخاطر الطبية",
+  "Classic diagnostic ML models predicting heart-disease and breast-cancer risk from clinical features, with model evaluation and interpretation.":"نماذج تعلم آلي تشخيصية كلاسيكية تتنبأ بمخاطر أمراض القلب وسرطان الثدي من السمات السريرية، مع تقييم وتفسير النماذج.",
+  "See all repositories on GitHub →":"كل المستودعات على GitHub ←",
+  // live section
+  "Live demo #1 · Text AI (NLP)":"عرض حيّ #1 · ذكاء النصوص (NLP)",
+  "A real transformer for sentiment & emotion (English & Arabic) running 100% in-browser via Transformers.js · no server, no API key. A live, public Hugging Face Space.":"محوّل حقيقي لتحليل المشاعر والعواطف (الإنجليزية والعربية) يعمل 100% داخل المتصفح عبر Transformers.js · بلا خادم أو مفتاح API. مساحة Hugging Face عامة وحيّة.",
+  "Live demo #2 · Object Detection (CV)":"عرض حيّ #2 · كشف الأجسام (رؤية حاسوب)",
+  "Upload any photo and a DETR transformer draws labeled bounding boxes · real computer vision running entirely in your browser. Ties to my YOLOv8 detection work.":"ارفع أي صورة ليرسم محوّل DETR صناديق محيطة موسومة · رؤية حاسوب حقيقية تعمل بالكامل في متصفحك. مرتبطة بعملي في كشف YOLOv8.",
+  "n8n automation workflows":"مسارات أتمتة n8n",
+  "A published collection of production-style n8n automation workflows · AI content pipelines, lead-capture automations and LLM agents · with importable JSON, diagrams and docs.":"مجموعة منشورة من مسارات أتمتة n8n بأسلوب إنتاجي · خطوط محتوى ذكية، أتمتة التقاط العملاء، ووكلاء LLM · مع JSON قابل للاستيراد ومخططات وتوثيق.",
+  "Open live demo →":"افتح العرض الحيّ ←","Browse workflows →":"تصفّح المسارات ←",
+  // publications
+  "🏅 AWARD · EGYPT 2024":"🏅 جائزة · مصر 2024","🎓 CERTIFICATIONS":"🎓 شهادات",
+  "Explainable Ensemble Deep Learning for Fruit Disease Detection":"تعلم عميق تجميعي قابل للتفسير لكشف أمراض الفاكهة",
+  "Sustainable agriculture & food-system resilience · 98.47% accuracy with Grad-CAM explainability. Published on IEEE Xplore.":"زراعة مستدامة ومرونة النظام الغذائي · دقة 98.47% مع تفسير Grad-CAM. منشور على IEEE Xplore.",
+  "A Novel Deep CNN Model with L1 Regularization for Plant Disease Classification":"نموذج CNN عميق جديد بتنظيم L1 لتصنيف أمراض النبات",
+  "Deep CNN architecture with L1 regularization for robust plant-disease classification.":"بنية CNN عميقة بتنظيم L1 لتصنيف أمراض النبات بثبات.",
+  "AI Olympiad · 2nd Place Nationally":"أولمبياد الذكاء الاصطناعي · المركز الثاني وطنيًا",
+  "Across Computer Vision, Embedded Systems, and Cybersecurity.":"في رؤية الحاسوب والأنظمة المدمجة والأمن السيبراني.",
+  "Transformer-Based NLP (NVIDIA) · AWS ML & Cloud Foundations · Advanced Learning Algorithms (DeepLearning.AI & Stanford) · Data Scientist Pro & Deep Learning with PyTorch (DataCamp) · Meta Front-End.":"معالجة لغة بالمحوّلات (NVIDIA) · أساسيات التعلم الآلي والسحابة (AWS) · خوارزميات التعلم المتقدمة (DeepLearning.AI وStanford) · عالم بيانات محترف وتعلم عميق بـPyTorch (DataCamp) · واجهة أمامية Meta.",
+  // contact
+  "Let's build something.":"لنبنِ شيئًا معًا.",
+  "Open to AI Engineer / Full-Stack roles · remote or on-site. Available immediately.":"منفتح على أدوار مهندس ذكاء اصطناعي / ويب متكامل · عن بُعد أو حضوري. متاح فورًا.",
+  "✉️ Email me":"✉️ راسلني"
+};
+const H1_AR = "محمد هيثم<br><span class=\"g\">الزمزمي</span>";
+const SEL = "h1,.sub,.loc,.eyebrow,.nav-links a,.nav-cta,.btn,.stat .l,.sec-tag,.sec-title,.sec-sub,.about p,.quickfacts h4,.qf-row span,.skill-card h4,.exp h4,.exp .role-sub,.exp li,.flag-intro p,.proj h4,.proj p,.feature h4,.feature p,.pub .badge,.pub h4,.pub p,.contact h2,.contact p";
+const norm = s => s.replace(/\s+/g,' ').trim();
+let els = [];
+document.querySelectorAll(SEL).forEach(el=>{ el._en = el.innerHTML; el._key = norm(el.textContent); els.push(el); });
+
+function setLang(lang){
+  const ar = lang === 'ar';
+  document.documentElement.setAttribute('dir', ar ? 'rtl' : 'ltr');
+  document.documentElement.setAttribute('lang', ar ? 'ar' : 'en');
+  els.forEach(el=>{
+    if(el.tagName === 'H1'){ el.innerHTML = ar ? H1_AR : el._en; return; }
+    if(ar){ const v = AR[el._key]; if(v !== undefined) el.innerHTML = v; }
+    else { el.innerHTML = el._en; }
+  });
+  const t = document.getElementById('langToggle'); if(t) t.textContent = ar ? 'EN' : 'العربية';
+  try{ localStorage.setItem('lang', lang); }catch(e){}
+}
+function toggleLang(){ setLang(document.documentElement.getAttribute('dir') === 'rtl' ? 'en' : 'ar'); }
+window.toggleLang = toggleLang;
+try{ if(localStorage.getItem('lang') === 'ar') setLang('ar'); }catch(e){}
 </script>
 </body>
 </html>
